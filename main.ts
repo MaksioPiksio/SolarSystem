@@ -11,7 +11,7 @@ const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerH
 const renderer = new THREE.WebGLRenderer({ canvas: document.querySelector("#bg") as HTMLCanvasElement, }); //prettier-ignore
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
-camera.position.set(0, 50, 120);
+camera.position.set(0, 50, 170);
 renderer.render(scene, camera);
 
 const pointLight = new THREE.PointLight(0xffffff, 1000);
@@ -32,18 +32,19 @@ planety.forEach((el) => addPlanet(el));
 document.querySelectorAll("li").forEach((item: Element) => {
     item.addEventListener("click", async () => {
         let planetName = item.textContent;
-        let planetData = planety.find((planet) => planet[0] === planetName);
+        let planetData = planety.find((planet) => planet[0] === planetName)!;
 
-        if (planetData) {
-            for (const el of planety) movePlanetPosition(el, planetData[1]);
+        planety.forEach((el) => movePlanetPosition(el, planetData[1]));
 
-            const targetPosition = new THREE.Vector3(
+        await moveCameraPosition(
+            camera,
+            new THREE.Vector3(
                 0,
                 planetName === "sun" ? 50 : 10,
                 planetName === "sun" ? planetData[2] + 70 : planetData[2] + 10
-            );
-            await moveCameraPosition(camera, targetPosition, 1000);
-        }
+            ),
+            1000
+        );
 
         camera.lookAt(new THREE.Vector3(0, 0, 0));
     });
@@ -52,7 +53,7 @@ document.querySelectorAll("li").forEach((item: Element) => {
 const animate = () => {
     requestAnimationFrame(animate);
     planety.forEach((el: PlanetType) => (el[3]!.rotation.y += 0.005));
-    if (planety[0][3]) planety[0][3].rotation.y -= 0.0045;
+    planety[0][3]!.rotation.y -= 0.0045;
     renderer.render(scene, camera);
 };
 

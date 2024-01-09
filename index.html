@@ -6,20 +6,110 @@
         <title>Solar System</title>
     </head>
     <body>
-        <nav class="w-screen flex justify-center items-center pt-4">
+        <nav class="fixed w-screen flex justify-center items-center pt-4 z-20">
             <!-- prettier-ignore -->
             <ul class='list absolute z-10 flex gap-4'>
-                <li class='listItem hover:text-gray-800 cursor-pointer'>sun</li>
-                <li class='listItem hover:text-gray-800 cursor-pointer'>mercury</li>
-                <li class='listItem hover:text-gray-800 cursor-pointer'>venus</li>
-                <li class='listItem hover:text-gray-800 cursor-pointer'>earth</li>
-                <li class='listItem hover:text-gray-800 cursor-pointer'>mars</li>
-                <li class='listItem hover:text-gray-800 cursor-pointer'>jupiter</li>
-                <li class='listItem hover:text-gray-800 cursor-pointer'>saturn</li>
-                <li class='listItem hover:text-gray-800 cursor-pointer'>uranus</li>
-                <li class='listItem hover:text-gray-800 cursor-pointer'>neptune</li>
+                <li class='listItem hover:text-gray-800 cursor-pointer'><a href="#sun">sun</a></li>
+                <li class='listItem hover:text-gray-800 cursor-pointer'><a href="#mercury">mercury</a></li>
+                <li class='listItem hover:text-gray-800 cursor-pointer'><a href="#venus">venus</a></li>
+                <li class='listItem hover:text-gray-800 cursor-pointer'><a href="#earth">earth</a></li>
+                <li class='listItem hover:text-gray-800 cursor-pointer'><a href="#mars">mars</a></li>
+                <li class='listItem hover:text-gray-800 cursor-pointer'><a href="#jupiter">jupiter</a></li>
+                <li class='listItem hover:text-gray-800 cursor-pointer'><a href="#saturn">saturn</a></li>
+                <li class='listItem hover:text-gray-800 cursor-pointer'><a href="#uranus">uranus</a></li>
+                <li class='listItem hover:text-gray-800 cursor-pointer'><a href="#neptune">neptune</a></li>
             </ul>
         </nav>
+        <main class="absolute z-10">
+            <section class="h-screen flex justify-center items-center" id="sun">
+                <div class="bg-white p-4 rounded mx-auto w-max h-max">
+                    <h1>Sun</h1>
+                    <h2>Radius: 695,700 km</h2>
+                    <h2>Mass: 1.989e30 kg</h2>
+                    <h2>Surface Temperature: 5,500 °C</h2>
+                </div>
+            </section>
+            <section
+                class="h-screen flex justify-center items-center"
+                id="mercury">
+                <div class="bg-white p-4 rounded mx-auto w-max h-max">
+                    <h1>Mercury</h1>
+                    <h2>Radius: 2,439.7 km</h2>
+                    <h2>Mass: 3.285e23 kg</h2>
+                    <h2>Surface Temperature: 430 °C</h2>
+                </div>
+            </section>
+            <section
+                class="h-screen flex justify-center items-center"
+                id="venus">
+                <div class="bg-white p-4 rounded mx-auto w-max h-max">
+                    <h1>Venus</h1>
+                    <h2>Radius: 6,051.8 km</h2>
+                    <h2>Mass: 4.867e24 kg</h2>
+                    <h2>Surface Temperature: 471 °C</h2>
+                </div>
+            </section>
+            <section
+                class="h-screen flex justify-center items-center"
+                id="earth">
+                <div class="bg-white p-4 rounded mx-auto w-max h-max">
+                    <h1>Earth</h1>
+                    <h2>Radius: 6,371 km</h2>
+                    <h2>Mass: 5.972e24 kg</h2>
+                    <h2>Surface Temperature: 16 °C</h2>
+                </div>
+            </section>
+            <section
+                class="h-screen flex justify-center items-center"
+                id="mars">
+                <div class="bg-white p-4 rounded mx-auto w-max h-max">
+                    <h1>Mars</h1>
+                    <h2>Radius: 3,389.5 km</h2>
+                    <h2>Mass: 6.39e23 kg</h2>
+                    <h2>Surface Temperature: -63 °C</h2>
+                </div>
+            </section>
+            <section
+                class="h-screen flex justify-center items-center"
+                id="jupiter">
+                <div class="bg-white p-4 rounded mx-auto w-max h-max">
+                    <h1>Jupiter</h1>
+                    <h2>Radius: 69,911 km</h2>
+                    <h2>Mass: 1.898e27 kg</h2>
+                    <h2>Surface Temperature: -108 °C</h2>
+                </div>
+            </section>
+            <section
+                class="h-screen flex justify-center items-center"
+                id="saturn">
+                <div class="bg-white p-4 rounded mx-auto w-max h-max">
+                    <h1>Saturn</h1>
+                    <h2>Radius: 58,232 km</h2>
+                    <h2>Mass: 5.683e26 kg</h2>
+                    <h2>Surface Temperature: -139 °C</h2>
+                </div>
+            </section>
+            <section
+                class="h-screen flex justify-center items-center"
+                id="uranus">
+                <div class="bg-white p-4 rounded mx-auto w-max h-max">
+                    <h1>Uranus</h1>
+                    <h2>Radius: 25,362 km</h2>
+                    <h2>Mass: 8.681e25 kg</h2>
+                    <h2>Surface Temperature: -197 °C</h2>
+                </div>
+            </section>
+            <section
+                class="h-screen flex justify-center items-center"
+                id="neptune">
+                <div class="bg-white p-4 rounded mx-auto w-max h-max">
+                    <h1>Neptune</h1>
+                    <h2>Radius: 24,622 km</h2>
+                    <h2>Mass: 1.024e26 kg</h2>
+                    <h2>Surface Temperature: -201 °C</h2>
+                </div>
+            </section>
+        </main>
         <canvas id="bg" class="fixed top-0 left-0 z-0"></canvas>
         <script type="module" src="/main.ts"></script>
     </body>
