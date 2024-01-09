@@ -7,7 +7,22 @@ export default {
         function ({ addUtilities }) {
             const newUtilities = {};
 
-            // Add your custom classes here
+            newUtilities[".card"] = {
+                "background-color": "white",
+                padding: "1rem",
+                "border-radius": "0.375rem",
+                margin: "0 auto",
+                "max-width": "max-content",
+                "max-height": "max-content",
+            };
+
+            newUtilities[".card-parent"] = {
+                height: "100vh",
+                display: "flex",
+                "justify-content": "center",
+                "align-items": "center",
+            };
+
             newUtilities[".mt-2\\/3"] = { "margin-top": "66.666667%" };
 
             addUtilities(newUtilities, ["responsive", "hover"]);
