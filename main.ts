@@ -4,7 +4,6 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { PlanetType } from "./assets/types.js";
 import { movePlanetPosition, moveCameraPosition } from "./assets/functions.js";
 import { addPlanet } from "./assets/functions.js";
-import { planety } from "./assets/functions.js";
 
 export const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000); //prettier-ignore
@@ -20,13 +19,21 @@ pointLight.position.set(-100, 0, 0);
 const ambientLight = new THREE.AmbientLight(0xffffff);
 scene.add(pointLight, ambientLight);
 
-const lightHelper = new THREE.PointLightHelper(pointLight);
-const gridHelper = new THREE.GridHelper(200, 50);
-scene.add(lightHelper, gridHelper);
-
 new OrbitControls(camera, renderer.domElement);
 
 scene.background = new THREE.TextureLoader().load("/space.jpg");
+
+const planety: PlanetType[] = [
+    ["sun", 0, 100, new THREE.Mesh()],
+    ["mercury", 102, 0.5, new THREE.Mesh()],
+    ["venus", 106, 1, new THREE.Mesh()],
+    ["earth", 110, 1, new THREE.Mesh()],
+    ["mars", 114, 0.5, new THREE.Mesh()],
+    ["jupiter", 126, 11, new THREE.Mesh()],
+    ["saturn", 150, 10, new THREE.Mesh()],
+    ["uranus", 167, 5, new THREE.Mesh()],
+    ["neptune", 179, 5, new THREE.Mesh()],
+];
 
 planety.forEach((el) => addPlanet(el));
 
@@ -59,3 +66,5 @@ const animate = () => {
 };
 
 animate();
+
+//

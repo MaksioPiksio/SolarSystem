@@ -20,8 +20,9 @@ export default {
                 height: "100vh",
                 display: "flex",
                 "justify-content": "center",
-                "align-items": "center",
+                "align-items": "flex-end",
             };
+
             newUtilities[".li"] = {
                 "&:hover": { color: "#2d3748" },
                 cursor: "pointer",
