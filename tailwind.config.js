@@ -23,9 +23,7 @@ export default {
                 "align-items": "center",
             };
             newUtilities[".li"] = {
-                "&:hover": {
-                    color: "#2d3748", // You can adjust this color based on your preference
-                },
+                "&:hover": { color: "#2d3748" },
                 cursor: "pointer",
             };
 
