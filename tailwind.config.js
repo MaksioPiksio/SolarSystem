@@ -22,6 +22,12 @@ export default {
                 "justify-content": "center",
                 "align-items": "center",
             };
+            newUtilities[".li"] = {
+                "&:hover": {
+                    color: "#2d3748", // You can adjust this color based on your preference
+                },
+                cursor: "pointer",
+            };
 
             newUtilities[".mt-2\\/3"] = { "margin-top": "66.666667%" };
 
