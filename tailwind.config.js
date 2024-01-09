@@ -12,7 +12,7 @@ export default {
                 padding: "1rem",
                 "border-radius": "0.375rem",
                 margin: "0 auto",
-                "max-width": "max-content",
+                "max-width": "100vw",
                 "max-height": "max-content",
             };
 
@@ -21,6 +21,7 @@ export default {
                 display: "flex",
                 "justify-content": "center",
                 "align-items": "flex-end",
+                width: "100vw",
             };
 
             newUtilities[".li"] = {
