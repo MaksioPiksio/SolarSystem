@@ -1,9 +1,8 @@
-import "./index.css";
+import "../index.css";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
-import { PlanetType } from "./assets/types.js";
-import { movePlanetPosition, moveCameraPosition } from "./assets/functions.js";
-import { addPlanet } from "./assets/functions.js";
+import { PlanetType } from "./assets/types";
+import { movePlanetPosition, moveCameraPosition, addPlanet } from "./functions"; //prettier-ignore
 
 export const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000); //prettier-ignore
@@ -66,5 +65,3 @@ const animate = () => {
 };
 
 animate();
-
-//

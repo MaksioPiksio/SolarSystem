@@ -5,8 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Solar System</title>
     </head>
-    <!-- Wyłączenie scrolla na body -->
-    <body style="overflow: hidden">
+    <body class="overflow-hidden">
         <nav class="fixed w-screen flex justify-center items-center pt-4 z-20">
             <ul class="absolute z-10 flex gap-4">
                 <li class="li"><a href="#sun">sun</a></li>
@@ -21,7 +20,9 @@
             </ul>
         </nav>
         <main class="absolute z-10">
-            <section class="card-parent sm:max-w-max sm:items-center" id="sun">
+            <section
+                class="card-parent sm:max-w-max sm:items-center pb-16"
+                id="sun">
                 <div class="card">
                     <h1>Sun</h1>
                     <h2>Radius: 695,700 km</h2>
@@ -30,7 +31,7 @@
                 </div>
             </section>
             <section
-                class="card-parent sm:max-w-max sm:items-center"
+                class="card-parent sm:max-w-max sm:items-center pb-16"
                 id="mercury">
                 <div class="card">
                     <h1>Mercury</h1>
@@ -40,7 +41,7 @@
                 </div>
             </section>
             <section
-                class="card-parent sm:max-w-max sm:items-center"
+                class="card-parent sm:max-w-max sm:items-center pb-16"
                 id="venus">
                 <div class="card">
                     <h1>Venus</h1>
@@ -50,7 +51,7 @@
                 </div>
             </section>
             <section
-                class="card-parent sm:max-w-max sm:items-center"
+                class="card-parent sm:max-w-max sm:items-center pb-16"
                 id="earth">
                 <div class="card">
                     <h1>Earth</h1>
@@ -59,7 +60,9 @@
                     <h2>Surface Temperature: 16 °C</h2>
                 </div>
             </section>
-            <section class="card-parent sm:max-w-max sm:items-center" id="mars">
+            <section
+                class="card-parent sm:max-w-max sm:items-center pb-16"
+                id="mars">
                 <div class="card">
                     <h1>Mars</h1>
                     <h2>Radius: 3,389.5 km</h2>
@@ -68,7 +71,7 @@
                 </div>
             </section>
             <section
-                class="card-parent sm:max-w-max sm:items-center"
+                class="card-parent sm:max-w-max sm:items-center pb-16"
                 id="jupiter">
                 <div class="card">
                     <h1>Jupiter</h1>
@@ -78,7 +81,7 @@
                 </div>
             </section>
             <section
-                class="card-parent sm:max-w-max sm:items-center"
+                class="card-parent sm:max-w-max sm:items-center pb-16"
                 id="saturn">
                 <div class="card">
                     <h1>Saturn</h1>
@@ -88,7 +91,7 @@
                 </div>
             </section>
             <section
-                class="card-parent sm:max-w-max sm:items-center"
+                class="card-parent sm:max-w-max sm:items-center pb-16"
                 id="uranus">
                 <div class="card">
                     <h1>Uranus</h1>
@@ -98,7 +101,7 @@
                 </div>
             </section>
             <section
-                class="card-parent sm:max-w-max sm:items-center"
+                class="card-parent sm:max-w-max sm:items-center pb-16"
                 id="neptune">
                 <div class="card">
                     <h1>Neptune</h1>
@@ -109,6 +112,6 @@
             </section>
         </main>
         <canvas id="bg" class="fixed top-0 left-0 z-0"></canvas>
-        <script type="module" src="/main.ts"></script>
+        <script type="module" src="src/main.ts"></script>
     </body>
 </html>
