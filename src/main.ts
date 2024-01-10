@@ -1,7 +1,7 @@
 import "../index.css";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
-import { PlanetType } from "./assets/types";
+import { PlanetType } from "./types";
 import { movePlanetPosition, moveCameraPosition, addPlanet } from "./functions"; //prettier-ignore
 
 export const scene = new THREE.Scene();

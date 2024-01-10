@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { PlanetType } from "./assets/types";
+import { PlanetType } from "./types";
 import { scene } from "./main";
 
 const addPlanet = (arr: PlanetType) => {
